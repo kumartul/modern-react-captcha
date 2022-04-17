@@ -68,7 +68,7 @@ const generateRandomHexColor = () => {
     for(let i = 0; i < 6; i++) {
         color += hex.charAt(Math.floor(Math.random() * hex.length));
     }
-    
+
     return color;
 }
 
@@ -84,7 +84,7 @@ const RandomText = ({ text, color, bgColor }) => {
             {
                 captcha.split('').map(unit => (
                     <span key={Math.random() - Math.random()} style={{ color: `${color === 'random' ? generateRandomHexColor() : color}`, fontSize: `${fontSizes[Math.floor(Math.random() * fontSizes.length)]}px`, fontWeight: `${fontWeights[Math.floor(Math.random() * fontWeights.length)]}`, fontStyle: `${Math.random() > 0.5 ? 'italic' : 'normal'}`, fontFamily: `${fontFamilies[Math.floor(Math.random() * fontFamilies.length)]}` }}>{unit}</span>
-                ))    
+                ))
             }
         </div>
     );
