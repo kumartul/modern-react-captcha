@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+<h1 align="center">r-captcha</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+	<a href="https://github.com/kumartul/r-captcha/fork" target="blank">
+		<img src="https://img.shields.io/github/forks/kumartul/r-captcha?style=flat-square" alt="r-captcha Forks"/>
+	</a>
+	<a href="https://github.com/kumartul/r-captcha/stargazers" target="blank">
+		<img src="https://img.shields.io/github/stars/kumartul/r-captcha?style=flat-square" alt="r-captcha Stars"/>
+	</a>
+	<a href="https://github.com/kumartul/r-captcha/issues" target="blank">
+		<img src="https://img.shields.io/github/issues/kumartul/r-captcha?style=flat-square" alt="r-captcha Issues"/>
+	</a>
+	<a href="https://github.com/kumartul/r-captcha/pulls" target="blank">
+		<img src="https://img.shields.io/github/issues-pr/kumartul/r-captcha?style=flat-square" alt="r-captcha Pull Requests"/>
+	</a>
+	<a href="https://twitter.com/intent/tweet?text=Checkout r-captcha package by @kumartul001. It is a simple to use library to generate captcha of your choice
+	Source Code: github.com/kumartul/r-captcha">
+		<img src="https://img.shields.io/twitter/url?label=Share%20on%20Twitter&style=social&url=https%3A%2F%2Fgithub.com%kumartul%r-captcha">
+	</a>
+</p>
 
-## Available Scripts
+<p align="center">
+    <a href="" target="blank">Docs</a>
+    ·
+    <a href="https://github.com/kumartul/r-captcha/issues/new/choose">Report Bug</a>
+    ·
+    <a href="https://github.com/kumartul/r-captcha/issues/new/choose">Request Feature</a>
+</p>
 
-In the project directory, you can run:
+### r-captcha 🚀
 
-### `npm start`
+r-captcha is a simple library with no learning curve 😀 to generate simple captchas for your websites.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Contributing 🤝
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository
 
-### `npm test`
+```bash
+git clone https://github.com/kumartul/r-captcha.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Change the working directory
 
-### `npm run build`
+```bash
+cd r-captcha
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Switch to example directory to see the example
 
-### `npm run eject`
+```bash
+cd example
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Run the example
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You are ready to build! Open [localhost:3000](http://localhost:3000/) to see the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/kumartul/r-captcha/compare).
 
-## Learn More
+## Installation ⚙
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Using npm:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install r-captcha
+```
 
-### Code Splitting
+## Usage Guide 👐
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Please refer to the [official documentation]()
 
-### Analyzing the Bundle Size
+## Built With ⚒
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [HTML](https://html.spec.whatwg.org/)
+- [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [React](https://reactjs.org/)
 
-### Making a Progressive Web App
+## 👨‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 👤 Atul Kumar
 
-### Advanced Configuration
+- Email: [kumartul001@gmail.com](kumartul001@gmail.com)
+- Github: [kumartul](https://github.com/kumartul)
+- Twitter: [kumartul001](https://twitter.com/kumartul001)
+- Instagram: [kumartul001](https://instagram.com/kumartul001)
+- Facebook: [kumartul001](https://facebook.com/kumartul001)
+- Hashnode: [kumartul](https://hashnode.com/@kumartul)
+- Medium: [kumartul001](https://hashnode.com/@kumartul001)
+- ProductHunt: [@kumartul001](https://www.producthunt.com/@kumartul001)
+- Devpost: [kumartul](https://devpost.com/kumartul)
+- HackerEarth: [@kumartul001](https://www.hackerearth.com/@kumartul001)
+- Fueler: [kumartul](https://fueler.io/kumartul)
+- IndieHackers: [kumartul](https://www.indiehackers.com/kumartul)
+- Dev: [kumartul001](https://dev.to/kumartul001)
+- BuyMeACoffee: [kumartul](https://www.buymeacoffee.com/kumartul)
+- Tiny Acquisitions: [atulkumar](https://tinyacquisitions.com/profile/atulkumar)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🙏 Support
 
-### Deployment
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you found this library helpful, consider supporting me with a coffee.
 
-### `npm run build` fails to minify
+<a href="https://www.buymeacoffee.com/kumartul">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
+</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+<h3 align="center">
+	r-captcha needs a ⭐️ from you
+</h3>
