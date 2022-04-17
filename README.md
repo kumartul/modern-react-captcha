@@ -114,9 +114,3 @@ If you found this library helpful, consider supporting me with a coffee.
 <a href="https://www.buymeacoffee.com/kumartul">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
 </a>
-
----
-
-<h3 align="center">
-	r-captcha needs a ⭐️ from you
-</h3>
