@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	text-decoration: none;
+
+	list-style: none;
+
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+/* ----------------------- Variables ----------------------- */
+:root {
+	--navbar-height: 60px;
+	--footer-height: 50px;
+}
+
+/* ----------------------- Light Mode ----------------------- */
+
+body {
+	background-color: whitesmoke;
+}
+
+.navbar {
+	height: var(--navbar-height);
+
+	border-bottom: 1px solid lightgrey;
+
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+
+	background-color: white;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	user-select: none;
+}
+
+.navbar__left {
+	display: flex;
+	align-items: center;
+}
+.navbar__left > img {
+	height: 50px;
+}
+.navbar__left > h2 {
+	color: #4a4a4a;
+}
+.navbar__left > h2 > span {
+	color: #0082e6;
+}
+
+.navbar__right {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 0 10px;
+}
+.navbar__right > #stars-on-github {
+	color: #0082e6;
+	font-size: 15px;
+
+	background-color: white;
+
+	border: 2px solid #0082e6;
+	border-radius: 4px;
+
+	padding: 5px 10px;
+	margin-left: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+
+	transition: all 0.3s ease;
+}
+.navbar__right > #stars-on-github:hover {
+	color: white;
+
+	background-color: #0082e6;
+}
+.navbar__right > .mode-handler > svg {
+	height: 25px;
+	width: 25px;
+
+	margin-left: 10px;
+
+	cursor: pointer;
+}
+.navbar__right > .mode-handler > #moon-icon {
+	fill: #4a4a4a;
+}
+.navbar__right > .mode-handler > #sun-icon {
+	fill: lightgrey;
+}
+.navbar__right > .mode-handler > .hidden {
+	display: none;
+}
+
+.global {
+	height: calc(100vh - var(--navbar-height) - var(--footer-height));
+
+	display: flex;
+}
+
+.sidebar {
+	height: calc(100vh - var(--navbar-height) - var(--footer-height));
+	width: 25%;
+
+	border-right: 1px solid lightgrey;
+}
+
+.footer {
+	width: 100vw;
+	height: var(--footer-height);
+
+	background-color: white;
+
+	border-top: 1px solid lightgrey;
+
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ----------------------- Dark Mode ----------------------- */
+
+body.dark {
+	background-color: #0e1117;
+}
+
+body.dark > .navbar {
+	background-color: #161b22;
+
+	border-bottom: 1px solid #5e5e5e;
+}
+body.dark > .navbar > .navbar__left > h2 {
+	color: whitesmoke;
+}
+body.dark > .navbar > .navbar__left > h2 > span {
+	color: #006de2;
+}
+
+body.dark .sidebar {
+	border-right: 1px solid #5e5e5e;
+}
+
+body.dark > .footer {
+	background-color: #161b22;
+
+	border-top: 1px solid #5e5e5e;
+}
