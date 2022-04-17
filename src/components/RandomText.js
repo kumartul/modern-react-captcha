@@ -61,7 +61,7 @@ export const generateRandomCaptcha = (charset, length) => {
 }
 
 // Function: Generates a random hex color
-export const generateRandomHexColor = () => {
+const generateRandomHexColor = () => {
     const hex = '0123456789ABCDEF';
     let color = '#';
 
@@ -72,7 +72,7 @@ export const generateRandomHexColor = () => {
     return color;
 }
 
-const RandomText = ({ color, text }) => {
+const RandomText = ({ text, color, bgColor }) => {
     const fontSizes = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
     const fontWeights = ['light', 'normal', 'bold'];
     const fontFamilies = ['Cambria', 'Calibri', 'Mangal', 'Arial Narrow', 'Sanskrit Text', 'Adobe Caslon Pro', 'Adobe Caslon Pro Bold', 'Adobe Garamand Pro', 'Adobe Garamand Pro Bold', 'Agency FB', 'Algerian', 'Aparajita', 'Arial', 'Arno Pro', 'Bahnschrift', 'Bauhas 93', 'Bell MT', 'Berlin Sans FB', 'Birch STD', 'Bradley Hand ITC', 'Broadway', 'Candara', 'Cascadia Code', 'Castellar', 'Consolas', 'Cooper Std Black', 'Curlz MT', 'Courier New', 'Gabriola', 'Ink Free', 'MV Boli', 'Orator Std', 'Papyrus', 'Tahoma', 'Cursive', 'sans-serif'];
@@ -80,7 +80,7 @@ const RandomText = ({ color, text }) => {
     const captcha = text;
 
     return (
-        <div className="captcha__text">
+        <div className="captcha__text" style={{ width: 'fit-content', padding: '3px 10px', backgroundColor: `${(bgColor === 'random' || !bgColor) ? generateRandomHexColor() : bgColor}` }}>
             {
                 captcha.split('').map(unit => (
                     <span key={Math.random() - Math.random()} style={{ color: `${color === 'random' ? generateRandomHexColor() : color}`, fontSize: `${fontSizes[Math.floor(Math.random() * fontSizes.length)]}px`, fontWeight: `${fontWeights[Math.floor(Math.random() * fontWeights.length)]}`, fontStyle: `${Math.random() > 0.5 ? 'italic' : 'normal'}`, fontFamily: `${fontFamilies[Math.floor(Math.random() * fontFamilies.length)]}` }}>{unit}</span>
