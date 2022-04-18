@@ -1,48 +1,48 @@
 <h1 align="center">modern-react-captcha</h1>
 
 <p align="center">
-	<a href="https://github.com/kumartul/r-captcha/fork" target="blank">
-		<img src="https://img.shields.io/github/forks/kumartul/r-captcha?style=flat-square" alt="r-captcha Forks"/>
+	<a href="https://github.com/kumartul/modern-react-captcha/fork" target="blank">
+		<img src="https://img.shields.io/github/forks/kumartul/modern-react-captcha?style=flat-square" alt="modern-react-captcha Forks"/>
 	</a>
-	<a href="https://github.com/kumartul/r-captcha/stargazers" target="blank">
-		<img src="https://img.shields.io/github/stars/kumartul/r-captcha?style=flat-square" alt="r-captcha Stars"/>
+	<a href="https://github.com/kumartul/modern-react-captcha/stargazers" target="blank">
+		<img src="https://img.shields.io/github/stars/kumartul/modern-react-captcha?style=flat-square" alt="modern-react-captcha Stars"/>
 	</a>
-	<a href="https://github.com/kumartul/r-captcha/issues" target="blank">
-		<img src="https://img.shields.io/github/issues/kumartul/r-captcha?style=flat-square" alt="r-captcha Issues"/>
+	<a href="https://github.com/kumartul/modern-react-captcha/issues" target="blank">
+		<img src="https://img.shields.io/github/issues/kumartul/modern-react-captcha?style=flat-square" alt="modern-react-captcha Issues"/>
 	</a>
-	<a href="https://github.com/kumartul/r-captcha/pulls" target="blank">
-		<img src="https://img.shields.io/github/issues-pr/kumartul/r-captcha?style=flat-square" alt="r-captcha Pull Requests"/>
+	<a href="https://github.com/kumartul/modern-react-captcha/pulls" target="blank">
+		<img src="https://img.shields.io/github/issues-pr/kumartul/modern-react-captcha?style=flat-square" alt="modern-react-captcha Pull Requests"/>
 	</a>
-	<a href="https://twitter.com/intent/tweet?text=Checkout r-captcha package by @kumartul001. It is a simple to use library to generate captcha of your choice
-	Source Code: github.com/kumartul/r-captcha">
-		<img src="https://img.shields.io/twitter/url?label=Share%20on%20Twitter&style=social&url=https%3A%2F%2Fgithub.com%kumartul%r-captcha">
+	<a href="https://twitter.com/intent/tweet?text=Checkout modern-react-captcha package by @kumartul001. It is a simple to use library to generate captcha of your choice
+	Source Code: github.com/kumartul/modern-react-captcha">
+		<img src="https://img.shields.io/twitter/url?label=Share%20on%20Twitter&style=social&url=https%3A%2F%2Fgithub.com%kumartul%modern-react-captcha">
 	</a>
 </p>
 
 <p align="center">
     <a href="" target="blank">Docs</a>
     ·
-    <a href="https://github.com/kumartul/r-captcha/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/kumartul/modern-react-captcha/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/kumartul/r-captcha/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/kumartul/modern-react-captcha/issues/new/choose">Request Feature</a>
 </p>
 
-### r-captcha 🚀
+### modern-react-captcha 🚀
 
-r-captcha is a simple library with no learning curve 😀 to generate simple captchas for your websites.
+modern-react-captcha is a simple library with no learning curve 😀 to generate simple captchas for your websites.
 
 ### Contributing 🤝
 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/kumartul/r-captcha.git
+git clone https://github.com/kumartul/modern-react-captcha.git
 ```
 
 2. Change the working directory
 
 ```bash
-cd r-captcha
+cd modern-react-captcha
 ```
 
 3. Install dependencies
@@ -65,19 +65,19 @@ npm run start
 
 You are ready to build! Open [localhost:3000](http://localhost:3000/) to see the app.
 
-- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/kumartul/r-captcha/compare).
+- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/kumartul/modern-react-captcha/compare).
 
 ## Installation ⚙
 
 - Using npm:
 
 ```bash
-npm install r-captcha
+npm install modern-react-captcha
 ```
 
 ## Usage Guide 👐
 
-Please refer to the [official documentation](https://r-captcha.netlify.app/)
+Please refer to the [official documentation](https://modern-react-captcha.netlify.app/)
 
 ## Built With ⚒
 
@@ -86,7 +86,7 @@ Please refer to the [official documentation](https://r-captcha.netlify.app/)
 - [React](https://reactjs.org/)
 
 ## License 🛡
-Licensed under the [MIT License](https://github.com/kumartul/r-captcha/blob/master/LICENSE)
+Licensed under the [MIT License](https://github.com/kumartul/modern-react-captcha/blob/master/LICENSE)
 
 ## 👨‍💻 Author
 
