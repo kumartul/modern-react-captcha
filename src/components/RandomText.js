@@ -80,10 +80,10 @@ const RandomText = ({ text, color, bgColor }) => {
     const captcha = text;
 
     return (
-        <div className="captcha__text" style={{ width: 'fit-content', padding: '3px 10px', backgroundColor: `${(bgColor === 'random' || !bgColor) ? generateRandomHexColor() : bgColor}` }}>
+        <div className="r-captcha__captchaText" style={{ width: 'fit-content', padding: '3px 10px', backgroundColor: `${(bgColor === 'random' || !bgColor) ? generateRandomHexColor() : bgColor}` }}>
             {
                 captcha.split('').map(unit => (
-                    <span key={Math.random() - Math.random()} style={{ color: `${color === 'random' ? generateRandomHexColor() : color}`, fontSize: `${fontSizes[Math.floor(Math.random() * fontSizes.length)]}px`, fontWeight: `${fontWeights[Math.floor(Math.random() * fontWeights.length)]}`, fontStyle: `${Math.random() > 0.5 ? 'italic' : 'normal'}`, fontFamily: `${fontFamilies[Math.floor(Math.random() * fontFamilies.length)]}` }}>{unit}</span>
+                    <span key={Math.random() - Math.random()} className='r-captcha__character' style={{ color: `${color === 'random' ? generateRandomHexColor() : color}`, fontSize: `${fontSizes[Math.floor(Math.random() * fontSizes.length)]}px`, fontWeight: `${fontWeights[Math.floor(Math.random() * fontWeights.length)]}`, fontStyle: `${Math.random() > 0.5 ? 'italic' : 'normal'}`, fontFamily: `${fontFamilies[Math.floor(Math.random() * fontFamilies.length)]}` }}>{unit}</span>
                 ))
             }
         </div>
