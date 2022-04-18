@@ -20,6 +20,10 @@
 
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+	<!-- Prism -->
+	<link rel="stylesheet" href="./prism/prism.css">
+	<script src="./prism/prism.js" defer></script>
 </head>
 <body>
 	<!-- Navbar -->
@@ -56,12 +60,557 @@
 	<div class="global">
 		<!-- Sidebar-->
 		<aside class="sidebar">
+			<div class="sidebar__header">
+				<input type="text" name="search" id="search" placeholder="Search..." autocomplete="off">
+			</div>
+			<div class="sidebar__body">
+				<ol>
+					<li>
+						<a href="#installation">
+							Installation
+						</a>
+					</li>
+					<li>
+						<a href="#import-ReactCaptcha">
+							Import ReactCaptcha
+						</a>
+					</li>
+					<li>
+						<a href="#ReactCaptcha-with-reload">
+							ReactCaptcha With Reload
+						</a>
+					</li>
+					<li>
+						<a href="#ReactCaptcha-without-reload">
+							ReactCaptcha Without Reload
+						</a>
+					</li>
+					<li>
+						<a href="#props">
+							Props
+						</a>
 
+						<ol type="i">
+							<li>
+								<a href="#props-charset">
+									charset
+								</a>
+							</li>
+							<li>
+								<a href="#props-length">
+									length
+								</a>
+							</li>
+							<li>
+								<a href="#props-color">
+									color
+								</a>
+							</li>
+							<li>
+								<a href="#props-bgColor">
+									bgColor
+								</a>
+							</li>
+							<li>
+								<a href="#props-reload">
+									reload
+								</a>
+							</li>
+							<li>
+								<a href="#props-reloadText">
+									reloadText
+								</a>
+							</li>
+							<li>
+								<a href="#props-reloadIcon">
+									reloadIcon
+								</a>
+							</li>
+							<li>
+								<a href="#props-handleSuccess">
+									handleSuccess
+								</a>
+							</li>
+							<li>
+								<a href="#props-handleFailure">
+									handleFailure
+								</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="#styling">
+							Styling
+						</a>
+					</li>
+					<li>
+						<a href="#important-links">
+							Important Links
+						</a>
+					</li>
+				</ol>
+			</div>
 		</aside>
 
 		<!-- Main Container -->
 		<main class="container">
+			<h1>r-Captcha Documentation</h1>
 
+			<!-- Installation -->
+			<section id="installation">
+				<h2>Installation</h2>
+
+				<div class="installation__npm">
+					<h3>Using npm:</h3>
+
+					<pre><code class="language-bash">npm install r-captcha</code></pre>
+				</div>
+				<div class="installation__yarn">
+					<h3>Using yarn:</h3>
+
+					<pre><code class="language-bash">yarn add r-captcha</code></pre>
+				</div>
+				<div class="installation__cdn">
+					<!-- TODO: Register the library on a CDN and then add the link here -->
+				</div>
+			</section>
+
+			<section id="import-ReactCaptcha">
+				<h2>Import ReactCaptcha Component</h2>
+
+				<pre><code class="language-javascript">import ReactCaptcha from 'r-captcha';</code></pre>
+			</section>
+
+			<!-- ReactCaptcha component with reload -->
+			<section id="ReactCaptcha-with-reload">
+				<h2>ReactCaptcha with reload functionality</h2>
+
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+import reloadIcon from './images/reloadIcon.svg';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			&lt;ReactCaptcha
+				charset='ulns'
+				length={6}
+				color='white'
+				bgColor='black'
+				reload={true}
+				reloadText='Reload Captcha'
+				reloadIcon={reloadIcon}
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+			</section>
+
+			<section id="ReactCaptcha-without-reload">
+				<h2>ReactCaptcha without reload functionality</h2>
+
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			&lt;ReactCaptcha
+				charset='ulns'
+				length={6}
+				color='white'
+				bgColor='black'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+			</section>
+
+			<section id="props">
+				<h2>Props</h2>
+
+				<h3 id="props-charset">charset</h3>
+
+				<p>Specifies which character set(s) to use to generate the captcha</p>
+
+				<p>We have defined the first letter of some standard character sets to use while generating the captcha:</p>
+
+				<table border>
+					<thead>
+						<tr>
+							<th>Character Set</th>
+							<th>Code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Uppercase</td>
+							<td>u/U</td>
+						</tr>
+						<tr>
+							<td>Lowercase</td>
+							<td>l/L</td>
+						</tr>
+						<tr>
+							<td>Number</td>
+							<td>n/N</td>
+						</tr>
+						<tr>
+							<td>Special Character</td>
+							<td>s/S</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>If the charset prop contains any of these letters, then it will generate the captcha by mixing the characters from the specified character sets.</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* This will generate a captcha using uppercase letters and lowercase letters only */}
+			{/* Default value of charset is 'ulns' */}
+			&lt;ReactCaptcha
+				charset='ul'
+				length={6}
+				color='white'
+				bgColor='black'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<p style="margin-bottom: 10px;">If you want to use all the character sets, either don't pass the charset prop or pass 'ulns' (order doesn't matter).</p>
+
+				<h3 id="props-length">length</h3>
+
+				<p>Specifies the length of the captcha</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* Since, no charset is passed here, therefore, all the character sets will be used to generate the captcha */}
+			{/* This will generate a captcha 5 characters long */}
+			{/* Default value of length is 6 */}
+			&lt;ReactCaptcha
+				length={5}
+				color='white'
+				bgColor='black'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<p><strong>length</strong> must be a positive integer else a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a> will be thrown</p>
+				<p><strong>length</strong> must be greater than 0 else NegativeLengthError will be thrown</p>
+				<p style="margin-bottom: 10px;"><strong>length</strong> must be less than 256 else MaxLengthExceededError will be thrown</p>
+
+				<h3 id="props-color">color</h3>
+
+				<p>Specifies the color of the captcha</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* Since, no length is passed here, therefore, captcha will be 6 characters long}
+			{/* The color of the characters of the captcha will be white */}
+			{/* Default value of color is 'black' */}
+			&lt;ReactCaptcha
+				charset='uln'
+				color='white'
+				bgColor='black'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<p style="margin-bottom: 10px;">If you set the value of the color prop to 'random', then the color of each character of the captcha will be generated randomly</p>
+
+				<h3 id="props-bgColor">bgColor</h3>
+
+				<p>Specifies the background color of the captcha</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* Since, the value of the color prop is set to 'random', therefore, the color of each character of the captcha will be generated randomly */}
+			{/* The background color of the captcha will be yellow */}
+			{/* Default value of bgColor is 'white' */}
+			&lt;ReactCaptcha
+				charset='uln'
+				color='random'
+				bgColor='yellow'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<p style="margin-bottom: 10px;">If you set the value of the bgColor prop to 'random', then the background color of the captcha will be generated randomly</p>
+
+				<h3 id="props-reload">reload</h3>
+
+				<p>Specifies whether the captcha can be reloaded or not</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* Since, the value of the bgColor prop is set to 'random', therefore, the background color of the captcha will be generated randomly */}
+			{/* Since, the reload prop is passed here, the users will be able to reload the captcha */}
+			{/* Default value of reload is false */}
+			&lt;ReactCaptcha
+				charset='uln'
+				color='random'
+				bgColor='yellow'
+				reload={true}
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+				<h3 id="props-reloadText">reloadText</h3>
+
+				<p>Specifies the text to be shown to reload the captcha</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* Since, reload prop is passed here, therefore, the users will be able to reload the captcha */}
+			{/* The text to be shown to reload the captcha will be 'Reload' */}
+			{/* Default value of reloadText is 'Reload Captcha' */}
+			&lt;ReactCaptcha
+				charset='uln'
+				color='random'
+				bgColor='yellow'
+				reload
+				reloadText='Reload'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<h3 id="props-reloadIcon">reloadIcon</h3>
+
+				<p>Specifies the icon to show in the reload button</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* Since, the reloadText prop is not passed here, the text that will be shown to reload the captcha will be 'Reload Captcha' */}
+			{/* Image at the URL https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-wlktv&psig=AOvVaw2c2XFgaJCx8X2g_UBXfDFt&ust=1650362479170000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOix-butnfcCFQAAAAAdAAAAABAD will be shown */}
+			{/* There is no default value of reloadIcon */}
+			&lt;ReactCaptcha
+				charset='uln'
+				color='random'
+				bgColor='yellow'
+				reload
+				reloadIcon='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-wlktv&psig=AOvVaw2c2XFgaJCx8X2g_UBXfDFt&ust=1650362479170000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOix-butnfcCFQAAAAAdAAAAABAD'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<h3 id="props-handleSuccess">handleSuccess</h3>
+
+				<p>Specifies the function to call if the captcha matches</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* If the captcha matches, the handleSuccess function will be called and as a result, an alert with the text 'Captcha matched!' will be shown */}
+			{/* There is no default value of handleSuccess */}
+			{/* You must pass a function as the value of handleSuccess */}
+			&lt;ReactCaptcha
+				charset='ulns'
+				color='#0082e6'
+				bgColor='whitesmoke'
+				reload={true}
+				reloadText='Reload'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+
+				<h3 id="props-handleFailure">handleFailure</h3>
+
+				<p>Specifies the function to call if the captcha does not match</p>
+
+				<p style="margin-top: 10px;"><strong>Example</strong></p>
+				<pre><code class="language-jsx">import React from 'react';
+
+import ReactCaptcha from 'r-captcha';
+
+const App = () => {
+	const handleSuccess = () => alert('Captcha matched!');
+	const handleFailure = () => alert('Captcha does not match');
+
+	return (
+		&lt;div&gt;
+			{/* If the captcha does not match, the handleFailure function will be called and as a result, an alert with the text 'Captcha does not match!' will be shown */}
+			{/* There is no default value of handleFailure */}
+			{/* You must pass a function as the value of handleFailure */}
+			&lt;ReactCaptcha
+				charset='ulns'
+				color='#0082e6'
+				reload={true}
+				reloadText='Reload'
+				handleSuccess={handleSuccess}
+				handleFailure={handleFailure} /&gt;
+		&lt;/div&gt;
+	);
+}
+
+export default App;</code></pre>
+			</section>
+
+			<section id="styling">
+				<p>To style various elements of the captcha, you can use the following CSS classes:</p>
+				<table border>
+					<thead>
+						<tr>
+							<th>Element</th>
+							<th>Class Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Root Component</td>
+							<td>r-captcha</td>
+						</tr>
+						<tr>
+							<td>Captcha Box</td>
+							<td>r-captcha__captchaText</td>
+						</tr>
+						<tr>
+							<td>Captcha Character</td>
+							<td>r-captcha__character</td>
+						</tr>
+						<tr>
+							<td>Reload Button</td>
+							<td>r-captcha__reloadBtn</td>
+						</tr>
+						<tr>
+							<td>Input Field</td>
+							<td>r-captcha__inputField</td>
+						</tr>
+						<tr>
+							<td>Submit Button</td>
+							<td>r-captcha__submitBtn</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="important-links">
+				<h2>Important Links</h2>
+				<ul>
+					<li><a href="https://github.com/kumartul/r-captcha">Source Code</a></li>
+					<li><a href="https://github.com/kumartul/r-captcha#readme">Home Page</a></li>
+					<li><a href="https://github.com/kumartul">Author</a></li>
+					<!-- TODO: Create a live example somewhere in the cloud and add its link here -->
+					<li><a href="">Live Example</a></li>
+				</ul>
+			</section>
 		</main>
 	</div>
 
