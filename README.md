@@ -77,13 +77,16 @@ npm install r-captcha
 
 ## Usage Guide 👐
 
-Please refer to the [official documentation]()
+Please refer to the [official documentation](https://r-captcha.netlify.app/)
 
 ## Built With ⚒
 
 - [HTML](https://html.spec.whatwg.org/)
 - [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 - [React](https://reactjs.org/)
+
+## License 🛡
+Licensed under the [MIT License](https://github.com/kumartul/r-captcha/blob/master/LICENSE)
 
 ## 👨‍💻 Author
 
