@@ -6,8 +6,8 @@
 		"captcha",
 		"library"
 	],
-	"homepage": "https://github.com/kumartul/r-captcha#readme",
-	"icon": "https://r-captcha.netlify.app/assets/icons/favicon.ico",
+	"homepage": "https://github.com/kumartul/modern-react-captcha#readme",
+	"icon": "https://modern-react-captcha.netlify.app/assets/icons/favicon.ico",
 	"maintainers": [
 		"kumartul"
 	],
@@ -16,7 +16,7 @@
 	"unpkg": "./dist/index.umd.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kumartul/r-captcha"
+		"url": "https://github.com/kumartul/modern-react-captcha"
 	},
 	"version": "1.0.2",
 	"private": false,
