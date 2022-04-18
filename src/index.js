@@ -49,7 +49,7 @@ ReactCaptcha.defaultProps = {
 	length: 6,
 	color: '#000',
 	bgColor: '#fff',
-	reload: true,
+	reload: false,
 	reloadText: 'Reload Captcha',
 }
 
