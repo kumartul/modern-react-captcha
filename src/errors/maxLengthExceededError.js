@@ -1,10 +1,10 @@
-class MaxLengthExceddedError extends Error {
+class MaxLengthExceededError extends Error {
 	constructor(message) {
 		super(message);
 
-		this.name = 'MaxLengthExceddedError';
+		this.name = 'MaxLengthExceededError';
 		this.message = message;
 	}
 }
 
-export default MaxLengthExceddedError;
+export default MaxLengthExceededError;

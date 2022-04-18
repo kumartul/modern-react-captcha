@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NegativeLengthError from '../errors/negativeLengthError';
-import MaxLengthExceddedError from '../errors/maxLengthExceededError';
+import MaxLengthExceededError from '../errors/maxLengthExceededError';
 
 // Function : Generates a random captcha
 export const generateRandomCaptcha = (charset, length) => {
@@ -27,7 +27,7 @@ export const generateRandomCaptcha = (charset, length) => {
     }
 
     if(length > 255) {
-        throw new MaxLengthExceddedError('Captcha length must be less than 255 characters long.');
+        throw new MaxLengthExceededError('Captcha length must be less than 255 characters long.');
     }
     else if(length > 8) {
         console.warn('Captcha length must be less than 8 characters long.');
