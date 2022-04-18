@@ -91,9 +91,9 @@ const RandomText = ({ text, color, bgColor }) => {
 }
 
 RandomText.defaultProps = {
-    charset: '',
-    length: 6,
-    color: 'black'
+	text: '',
+	color: 'random',
+	bgColor: 'random'
 }
 
 export default RandomText;
