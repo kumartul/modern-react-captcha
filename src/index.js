@@ -12,7 +12,7 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
     if(!handleFailure) {
         throw new NoHandleFailureCallbackError('You must provide a callback function for failure');
     }
-    
+
     const [captcha, setCaptcha] = useState(generateRandomCaptcha(charset, length));
 
     const inputRef = useRef(null);
@@ -24,7 +24,7 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
     const evaluateCaptcha = () => {
         if (captcha === inputRef.current.value) {
             handleSuccess();
-        } 
+        }
         else {
             handleFailure();
         }
@@ -42,6 +42,15 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
             <button type="button" onClick={evaluateCaptcha}>Submit</button>
         </div>
     );
+}
+
+ReactCaptcha.defaultProps = {
+	charset: 'ulns',
+	length: 6,
+	color: '#000',
+	bgColor: '#fff',
+	reload: true,
+	reloadText: 'Reload Captcha',
 }
 
 export default ReactCaptcha;
