@@ -4,7 +4,10 @@ const sunIcon = document.getElementById('sun-icon');
 const codeBlocks = [...document.querySelectorAll('pre')];
 
 const searchBar = document.getElementById('search');
+const sidebar = document.querySelector('.sidebar');
 const sidebarLinks = [...document.querySelectorAll('.sidebar li a')];
+
+const sidebarTogglerBtn = document.getElementById('sidebar-toggler');
 
 // Function: Appends a copy button to each code block
 const appendCopyButtonToCodeBlocks = codeBlocks => {
@@ -88,6 +91,31 @@ searchBar.addEventListener('keydown', () => {
 		}
 	});
 });
+
+sidebarTogglerBtn.addEventListener('click', () => {
+	if(sidebarTogglerBtn.dataset.sidebarActive === 'true') {
+		sidebarTogglerBtn.dataset.sidebarActive = 'false';
+
+		sidebarTogglerBtn.innerHTML = '<i class="fas fa-bars"></i>';
+
+		sidebar.style.left = '-100%';
+	}
+	else {
+		sidebarTogglerBtn.dataset.sidebarActive = 'true';
+
+		sidebarTogglerBtn.textContent = 'X';
+
+		sidebar.style.left = '0';
+	}
+});
+
+sidebarLinks.forEach(sidebarLink => {
+	sidebarLink.addEventListener('click', () => {
+		if(sidebarTogglerBtn.dataset.sidebarActive === 'true') {
+			sidebarTogglerBtn.click();
+		}
+	})
+})
 
 moonIcon.addEventListener('click', toggleTheme);
 sunIcon.addEventListener('click', toggleTheme);
