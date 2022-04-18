@@ -1,10 +1,16 @@
 {
 	"name": "modern-react-captcha",
 	"description": "Easy to use captcha library for React",
-	"keywords": ["react", "captcha", "library"],
+	"keywords": [
+		"react",
+		"captcha",
+		"library"
+	],
 	"homepage": "https://github.com/kumartul/r-captcha#readme",
 	"icon": "https://r-captcha.netlify.app/assets/icons/favicon.ico",
-	"maintainers": ["kumartul"],
+	"maintainers": [
+		"kumartul"
+	],
 	"main": "./dist/index.js",
 	"module": "./dist/index.module.js",
 	"unpkg": "./dist/index.umd.js",
@@ -12,7 +18,7 @@
 		"type": "git",
 		"url": "https://github.com/kumartul/r-captcha"
 	},
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"private": false,
 	"author": {
 		"name": "Atul Kumar",
