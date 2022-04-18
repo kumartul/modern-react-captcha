@@ -5,7 +5,9 @@
 	"homepage": "https://github.com/kumartul/r-captcha#readme",
 	"icon": "https://r-captcha.netlify.app/assets/icons/favicon.ico",
 	"maintainers": ["kumartul"],
-	"main": "dist/index.js",
+	"main": "./dist/index.js",
+	"module": "./dist/index.module.js",
+	"unpkg": "./dist/index.umd.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kumartul/r-captcha"
@@ -29,7 +31,9 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"bundle": "microbundle",
+		"watch-bundle": "microbundle watch"
 	},
 	"eslintConfig": {
 		"extends": [
