@@ -22,7 +22,11 @@ html {
 
 body {
 	background-color: whitesmoke;
+
+	overflow-x: hidden;
 }
+
+/* ----- NAVBAR ----- */
 
 .navbar {
 	height: var(--navbar-height);
@@ -104,11 +108,15 @@ body {
 	display: none;
 }
 
+/* ----- GLOBAL CONTAINER ----- */
+
 .global {
 	height: calc(100vh - var(--navbar-height) - var(--footer-height));
 
 	display: flex;
 }
+
+/* ----- SIDEBAR ----- */
 
 .sidebar {
 	height: calc(100vh - var(--navbar-height) - var(--footer-height));
@@ -116,6 +124,8 @@ body {
 
 	border-right: 1px solid lightgrey;
 }
+
+/* ----- FOOTER ----- */
 
 .footer {
 	width: 100vw;
@@ -126,6 +136,44 @@ body {
 	border-top: 1px solid lightgrey;
 
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer__left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer__left > a {
+	color: #323438;
+	font-size: 15px;
+	font-weight: bold;
+
+	margin-left: 10px;
+
+	cursor: pointer;
+}
+.footer__left a:hover {
+	color: black;
+}
+.footer__right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer__right > a {
+	color: #323438;
+
+	margin-right: 10px;
+
+	cursor: pointer;
+
+	transition: all 0.2s ease-out;
+}
+.footer__right > a:hover {
+	transform: translateY(-5px);
 }
 
 
@@ -134,6 +182,8 @@ body {
 body.dark {
 	background-color: #0e1117;
 }
+
+/* ----- NAVBAR ----- */
 
 body.dark > .navbar {
 	background-color: #161b22;
@@ -147,12 +197,22 @@ body.dark > .navbar > .navbar__left > h2 > span {
 	color: #006de2;
 }
 
+/* ----- SIDEBAR ----- */
+
 body.dark .sidebar {
 	border-right: 1px solid #5e5e5e;
 }
+
+/* ----- FOOTER ----- */
 
 body.dark > .footer {
 	background-color: #161b22;
 
 	border-top: 1px solid #5e5e5e;
+}
+body.dark > .footer a {
+	color: #9e9e9e;
+}
+body.dark > .footer a:hover {
+	color: white;
 }
