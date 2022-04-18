@@ -13,6 +13,13 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
         throw new NoHandleFailureCallbackError('You must provide a callback function for failure');
     }
 
+	if(typeof handleSuccess !== 'function') {
+		throw new TypeError('handleSuccess must be a function');
+	}
+	if(typeof handleFailure !== 'function') {
+		throw new TypeError('handleFailure must be a function');
+	}
+
     const [captcha, setCaptcha] = useState(generateRandomCaptcha(charset, length));
 
     const inputRef = useRef(null);
