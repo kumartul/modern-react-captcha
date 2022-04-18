@@ -1,4 +1,4 @@
-<h1 align="center">r-captcha</h1>
+<h1 align="center">modern-react-captcha</h1>
 
 <p align="center">
 	<a href="https://github.com/kumartul/r-captcha/fork" target="blank">
