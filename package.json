@@ -14,16 +14,23 @@
 	"main": "./dist/index.js",
 	"module": "./dist/index.module.js",
 	"unpkg": "./dist/index.umd.js",
+	"source": "./src/index.js",
+	"bugs": {
+		"url": "https://github.com/kumartul/modern-react-captcha/issues"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kumartul/modern-react-captcha"
 	},
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"private": false,
 	"author": {
 		"name": "Atul Kumar",
 		"email": "kumartul001@gmail.com"
 	},
+	"files": [
+		"dist"
+	],
 	"license": "MIT",
 	"dependencies": {
 		"@testing-library/jest-dom": "5.16.4",
