@@ -515,6 +515,9 @@ body.dark ::-webkit-scrollbar-thumb {
 
 	border: 2px solid #0E1117;
 }
+body.dark .sidebar__body::-webkit-scrollbar-thumb {
+	border: 2px solid #171c24;
+}
 
 /* ----------------------- Responsiveness ----------------------- */
 
