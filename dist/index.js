@@ -1,2 +1,345 @@
-var t=require("react");function r(t,r){t.prototype=Object.create(r.prototype),t.prototype.constructor=t,n(t,r)}function e(t){return e=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)},e(t)}function n(t,r){return n=Object.setPrototypeOf||function(t,r){return t.__proto__=r,t},n(t,r)}function o(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){})),!0}catch(t){return!1}}function a(t,r,e){return a=o()?Reflect.construct:function(t,r,e){var o=[null];o.push.apply(o,r);var a=new(Function.bind.apply(t,o));return e&&n(a,e.prototype),a},a.apply(null,arguments)}function c(t){var r="function"==typeof Map?new Map:void 0;return c=function(t){if(null===t||-1===Function.toString.call(t).indexOf("[native code]"))return t;if("function"!=typeof t)throw new TypeError("Super expression must either be null or a function");if(void 0!==r){if(r.has(t))return r.get(t);r.set(t,o)}function o(){return a(t,arguments,e(this).constructor)}return o.prototype=Object.create(t.prototype,{constructor:{value:o,enumerable:!1,writable:!0,configurable:!0}}),n(o,t)},c(t)}var l=/*#__PURE__*/function(t){function e(r){var e;return(e=t.call(this,r)||this).name="NegativeLengthError",e.message=r,e}return r(e,t),e}(/*#__PURE__*/c(RangeError)),u=/*#__PURE__*/function(t){function e(r){var e;return(e=t.call(this,r)||this).name="MaxLengthExceededError",e.message=r,e}return r(e,t),e}(/*#__PURE__*/c(Error)),i=function(t,r){var e="~`!@#$%^&*()-_=+\\|{}[]:;\"'<>,./?";if(t=t.toLowerCase(),r=r||6,!Number.isInteger(r))throw new TypeError("Length must be a positive integer");if(r<0)throw new l("Captcha length must be a positive number.");if(r<4&&console.warn("Captcha length must be at least 4 characters long."),r>255)throw new u("Captcha length must be less than 255 characters long.");r>8&&console.warn("Captcha length must be less than 8 characters long.");var n="",o="";t.includes("u")&&(n+="ABCDEFGHIJKLMNOPQRSTUVWXYZ"),t.includes("l")&&(n+="abcdefghijklmnopqrstuvwxyz"),t.includes("n")&&(n+="0123456789"),t.includes("s")&&(n+=e),""===t&&(n="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"+e);for(var a=0;a<r;a++)o+=n.charAt(Math.floor(Math.random()*n.length));return o},s=function(){for(var t="0123456789ABCDEF",r="#",e=0;e<6;e++)r+=t.charAt(Math.floor(Math.random()*t.length));return r},f=function(t){var r=t.color,e=t.bgColor,n=[15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],o=["light","normal","bold"],a=["Cambria","Calibri","Mangal","Arial Narrow","Sanskrit Text","Adobe Caslon Pro","Adobe Caslon Pro Bold","Adobe Garamand Pro","Adobe Garamand Pro Bold","Agency FB","Algerian","Aparajita","Arial","Arno Pro","Bahnschrift","Bauhas 93","Bell MT","Berlin Sans FB","Birch STD","Bradley Hand ITC","Broadway","Candara","Cascadia Code","Castellar","Consolas","Cooper Std Black","Curlz MT","Courier New","Gabriola","Ink Free","MV Boli","Orator Std","Papyrus","Tahoma","Cursive","sans-serif"],c=t.text;return h("div",{className:"modern-react-captcha__captchaText",style:{width:"fit-content",padding:"3px 10px",backgroundColor:""+("random"!==e&&e?e:s())}},c.split("").map(function(t){return h("span",{key:Math.random()-Math.random(),className:"modern-react-captcha__character",style:{color:""+("random"===r?s():r),fontSize:n[Math.floor(Math.random()*n.length)]+"px",fontWeight:""+o[Math.floor(Math.random()*o.length)],fontStyle:Math.random()>.5?"italic":"normal",fontFamily:""+a[Math.floor(Math.random()*a.length)]}},t)}))};f.defaultProps={text:"",color:"random",bgColor:"random"};var p=/*#__PURE__*/function(t){function e(r){var e;return(e=t.call(this,r)||this).name="NoHandleSuccessCallbackError",e.message=r,e}return r(e,t),e}(/*#__PURE__*/c(Error)),d=/*#__PURE__*/function(t){function e(r){var e;return(e=t.call(this,r)||this).name="NoHandleFailureCallbackError",e.message=r,e}return r(e,t),e}(/*#__PURE__*/c(Error)),m=function(r){var e=r.charset,n=r.length,o=r.color,a=r.bgColor,c=r.reload,l=r.reloadText,u=r.reloadIcon,s=r.handleSuccess,m=r.handleFailure;if(!s)throw new p("You must provide a callback function for successs");if(!m)throw new d("You must provide a callback function for failure");if("function"!=typeof s)throw new TypeError("handleSuccess must be a function");if("function"!=typeof m)throw new TypeError("handleFailure must be a function");var g=t.useState(i(e,n)),b=g[0],y=g[1],v=t.useRef(null);return h("div",{className:"modern-react-captcha"},h(f,{text:b,color:o,bgColor:a}),c&&h("button",{className:"modern-react-captcha__reloadBtn",onClick:function(){y(i(e,n))}},l||"Reload Captcha",u&&h("img",{src:u,alt:"Reload",style:{width:"20px",height:"20px"}})),h("input",{ref:v,type:"text",placeholder:"Enter captcha",className:"modern-react-captcha__inputField"}),h("button",{type:"button",onClick:function(){b===v.current.value?s():m(),v.current.value=""},className:"modern-react-captcha__submitBtn"},"Submit"))};m.defaultProps={charset:"ulns",length:6,color:"#000",bgColor:"#fff",reload:!1,reloadText:"Reload Captcha"},module.exports=m;
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+
+  _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _construct(Parent, args, Class) {
+  if (_isNativeReflectConstruct()) {
+    _construct = Reflect.construct;
+  } else {
+    _construct = function _construct(Parent, args, Class) {
+      var a = [null];
+      a.push.apply(a, args);
+      var Constructor = Function.bind.apply(Parent, a);
+      var instance = new Constructor();
+      if (Class) _setPrototypeOf(instance, Class.prototype);
+      return instance;
+    };
+  }
+
+  return _construct.apply(null, arguments);
+}
+
+function _isNativeFunction(fn) {
+  return Function.toString.call(fn).indexOf("[native code]") !== -1;
+}
+
+function _wrapNativeSuper(Class) {
+  var _cache = typeof Map === "function" ? new Map() : undefined;
+
+  _wrapNativeSuper = function _wrapNativeSuper(Class) {
+    if (Class === null || !_isNativeFunction(Class)) return Class;
+
+    if (typeof Class !== "function") {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+
+    if (typeof _cache !== "undefined") {
+      if (_cache.has(Class)) return _cache.get(Class);
+
+      _cache.set(Class, Wrapper);
+    }
+
+    function Wrapper() {
+      return _construct(Class, arguments, _getPrototypeOf(this).constructor);
+    }
+
+    Wrapper.prototype = Object.create(Class.prototype, {
+      constructor: {
+        value: Wrapper,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    return _setPrototypeOf(Wrapper, Class);
+  };
+
+  return _wrapNativeSuper(Class);
+}
+
+var NegativeLengthError = /*#__PURE__*/function (_RangeError) {
+  _inheritsLoose(NegativeLengthError, _RangeError);
+
+  function NegativeLengthError(message) {
+    var _this;
+
+    _this = _RangeError.call(this, message) || this;
+    _this.name = 'NegativeLengthError';
+    _this.message = message;
+    return _this;
+  }
+
+  return NegativeLengthError;
+}( /*#__PURE__*/_wrapNativeSuper(RangeError));
+
+var MaxLengthExceededError = /*#__PURE__*/function (_Error) {
+  _inheritsLoose(MaxLengthExceededError, _Error);
+
+  function MaxLengthExceededError(message) {
+    var _this;
+
+    _this = _Error.call(this, message) || this;
+    _this.name = 'MaxLengthExceededError';
+    _this.message = message;
+    return _this;
+  }
+
+  return MaxLengthExceededError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+
+var generateRandomCaptcha = function generateRandomCaptcha(charset, length) {
+  var characterSets = {
+    uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    lowercase: 'abcdefghijklmnopqrstuvwxyz',
+    number: '0123456789',
+    special: "~`!@#$%^&*()-_=+\\|{}[]:;\"'<>,./?"
+  };
+  charset = charset.toLowerCase();
+  length = length || 6;
+
+  if (!Number.isInteger(length)) {
+    throw new TypeError('Length must be a positive integer');
+  }
+
+  if (length < 0) {
+    throw new NegativeLengthError('Captcha length must be a positive number.');
+  } else if (length < 4) {
+    console.warn('Captcha length must be at least 4 characters long.');
+  }
+
+  if (length > 255) {
+    throw new MaxLengthExceededError('Captcha length must be less than 255 characters long.');
+  } else if (length > 8) {
+    console.warn('Captcha length must be less than 8 characters long.');
+  }
+
+  var captchaCharset = '';
+  var captcha = '';
+
+  if (charset.includes('u')) {
+    captchaCharset += characterSets.uppercase;
+  }
+
+  if (charset.includes('l')) {
+    captchaCharset += characterSets.lowercase;
+  }
+
+  if (charset.includes('n')) {
+    captchaCharset += characterSets.number;
+  }
+
+  if (charset.includes('s')) {
+    captchaCharset += characterSets.special;
+  }
+
+  if (charset === '') {
+    captchaCharset = characterSets.uppercase + characterSets.lowercase + characterSets.number + characterSets.special;
+  }
+
+  for (var i = 0; i < length; i++) {
+    captcha += captchaCharset.charAt(Math.floor(Math.random() * captchaCharset.length));
+  }
+
+  return captcha;
+};
+
+var generateRandomHexColor = function generateRandomHexColor() {
+  var hex = '0123456789ABCDEF';
+  var color = '#';
+
+  for (var i = 0; i < 6; i++) {
+    color += hex.charAt(Math.floor(Math.random() * hex.length));
+  }
+
+  return color;
+};
+
+var RandomText = function RandomText(_ref) {
+  var text = _ref.text,
+      color = _ref.color,
+      bgColor = _ref.bgColor;
+  var fontSizes = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+  var fontWeights = ['light', 'normal', 'bold'];
+  var fontFamilies = ['Cambria', 'Calibri', 'Mangal', 'Arial Narrow', 'Sanskrit Text', 'Adobe Caslon Pro', 'Adobe Caslon Pro Bold', 'Adobe Garamand Pro', 'Adobe Garamand Pro Bold', 'Agency FB', 'Algerian', 'Aparajita', 'Arial', 'Arno Pro', 'Bahnschrift', 'Bauhas 93', 'Bell MT', 'Berlin Sans FB', 'Birch STD', 'Bradley Hand ITC', 'Broadway', 'Candara', 'Cascadia Code', 'Castellar', 'Consolas', 'Cooper Std Black', 'Curlz MT', 'Courier New', 'Gabriola', 'Ink Free', 'MV Boli', 'Orator Std', 'Papyrus', 'Tahoma', 'Cursive', 'sans-serif'];
+  var captcha = text;
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "modern-react-captcha__captchaText",
+    style: {
+      width: 'fit-content',
+      padding: '3px 10px',
+      backgroundColor: "" + (bgColor === 'random' || !bgColor ? generateRandomHexColor() : bgColor)
+    }
+  }, captcha.split('').map(function (unit) {
+    return /*#__PURE__*/React__default.createElement("span", {
+      key: Math.random() - Math.random(),
+      className: "modern-react-captcha__character",
+      style: {
+        color: "" + (color === 'random' ? generateRandomHexColor() : color),
+        fontSize: fontSizes[Math.floor(Math.random() * fontSizes.length)] + "px",
+        fontWeight: "" + fontWeights[Math.floor(Math.random() * fontWeights.length)],
+        fontStyle: "" + (Math.random() > 0.5 ? 'italic' : 'normal'),
+        fontFamily: "" + fontFamilies[Math.floor(Math.random() * fontFamilies.length)]
+      }
+    }, unit);
+  }));
+};
+
+RandomText.defaultProps = {
+  text: '',
+  color: 'random',
+  bgColor: 'random'
+};
+
+var NoHandleSuccessCallbackError = /*#__PURE__*/function (_Error) {
+  _inheritsLoose(NoHandleSuccessCallbackError, _Error);
+
+  function NoHandleSuccessCallbackError(message) {
+    var _this;
+
+    _this = _Error.call(this, message) || this;
+    _this.name = 'NoHandleSuccessCallbackError';
+    _this.message = message;
+    return _this;
+  }
+
+  return NoHandleSuccessCallbackError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+
+var NoHandleFailureCallbackError = /*#__PURE__*/function (_Error) {
+  _inheritsLoose(NoHandleFailureCallbackError, _Error);
+
+  function NoHandleFailureCallbackError(message) {
+    var _this;
+
+    _this = _Error.call(this, message) || this;
+    _this.name = 'NoHandleFailureCallbackError';
+    _this.message = message;
+    return _this;
+  }
+
+  return NoHandleFailureCallbackError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+
+var ReactCaptcha = function ReactCaptcha(_ref) {
+  var charset = _ref.charset,
+      length = _ref.length,
+      color = _ref.color,
+      bgColor = _ref.bgColor,
+      reload = _ref.reload,
+      reloadText = _ref.reloadText,
+      reloadIcon = _ref.reloadIcon,
+      handleSuccess = _ref.handleSuccess,
+      handleFailure = _ref.handleFailure;
+
+  if (!handleSuccess) {
+    throw new NoHandleSuccessCallbackError('You must provide a callback function for successs');
+  }
+
+  if (!handleFailure) {
+    throw new NoHandleFailureCallbackError('You must provide a callback function for failure');
+  }
+
+  if (typeof handleSuccess !== 'function') {
+    throw new TypeError('handleSuccess must be a function');
+  }
+
+  if (typeof handleFailure !== 'function') {
+    throw new TypeError('handleFailure must be a function');
+  }
+
+  var _useState = React.useState(generateRandomCaptcha(charset, length)),
+      captcha = _useState[0],
+      setCaptcha = _useState[1];
+
+  var inputRef = React.useRef(null);
+
+  var reloadCaptcha = function reloadCaptcha() {
+    setCaptcha(generateRandomCaptcha(charset, length));
+  };
+
+  var evaluateCaptcha = function evaluateCaptcha() {
+    if (captcha === inputRef.current.value) {
+      handleSuccess();
+    } else {
+      handleFailure();
+    }
+
+    inputRef.current.value = '';
+  };
+
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "modern-react-captcha"
+  }, /*#__PURE__*/React__default.createElement(RandomText, {
+    text: captcha,
+    color: color,
+    bgColor: bgColor
+  }), reload && /*#__PURE__*/React__default.createElement("button", {
+    className: "modern-react-captcha__reloadBtn",
+    onClick: reloadCaptcha
+  }, reloadText ? reloadText : 'Reload Captcha', reloadIcon && /*#__PURE__*/React__default.createElement("img", {
+    src: reloadIcon,
+    alt: "Reload",
+    style: {
+      width: '20px',
+      height: '20px'
+    }
+  })), /*#__PURE__*/React__default.createElement("input", {
+    ref: inputRef,
+    type: "text",
+    placeholder: "Enter captcha",
+    className: "modern-react-captcha__inputField"
+  }), /*#__PURE__*/React__default.createElement("button", {
+    type: "button",
+    onClick: evaluateCaptcha,
+    className: "modern-react-captcha__submitBtn"
+  }, "Submit"));
+};
+
+ReactCaptcha.defaultProps = {
+  charset: 'ulns',
+  length: 6,
+  color: '#000',
+  bgColor: '#fff',
+  reload: false,
+  reloadText: 'Reload Captcha'
+};
+
+module.exports = ReactCaptcha;
 //# sourceMappingURL=index.js.map
