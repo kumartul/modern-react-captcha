@@ -9,7 +9,10 @@
 	"homepage": "https://github.com/kumartul/modern-react-captcha#readme",
 	"icon": "https://modern-react-captcha.netlify.app/assets/icons/favicon.ico",
 	"maintainers": [
-		"kumartul"
+		"Atul Kumar <kumartul001@gmail.com>"
+	],
+	"contributors": [
+		"Atul Kumar <kumartul001@gmail.com>"
 	],
 	"main": "./dist/index.js",
 	"module": "./dist/index.module.js",
@@ -18,16 +21,10 @@
 	"bugs": {
 		"url": "https://github.com/kumartul/modern-react-captcha/issues"
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/kumartul/modern-react-captcha"
-	},
+	"repository": "https://github.com/kumartul/modern-react-captcha",
 	"version": "1.0.4",
 	"private": false,
-	"author": {
-		"name": "Atul Kumar",
-		"email": "kumartul001@gmail.com"
-	},
+	"author": "Atul Kumar <kumartul001@gmail.com>",
 	"files": [
 		"dist"
 	],
