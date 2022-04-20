@@ -310,7 +310,7 @@ var ReactCaptcha = function ReactCaptcha(_ref) {
   }), reload && /*#__PURE__*/React.createElement("button", {
     className: "modern-react-captcha__reloadBtn",
     onClick: reloadCaptcha
-  }, reloadText ? reloadText : 'Reload Captcha', reloadIcon && /*#__PURE__*/React.createElement("img", {
+  }, reloadText, reloadIcon && /*#__PURE__*/React.createElement("img", {
     src: reloadIcon,
     alt: "Reload",
     style: {
