@@ -1,0 +1,40 @@
+.modern-react-captcha {
+	display: flex;
+	flex-direction: column;
+
+	width: fit-content;
+}
+.modern-react-captcha__submitBtn {
+	display: none !important;
+}
+.modern-react-captcha__captchaText {
+	border-radius: 5px;
+
+	margin-bottom: 1px;
+}
+.modern-react-captcha__reloadBtn {
+	border: none;
+
+	width: fit-content;
+
+	background: transparent;
+
+	padding: 0;
+
+	color: #0082e6;
+}
+.modern-react-captcha__reloadBtn:hover {
+	text-decoration: underline;
+}
+.modern-react-captcha__inputField {
+	border: 3px solid lightgrey;
+
+	outline: none;
+
+	color: #4a4a4a;
+
+	transition: border-color 0.2s ease-in-out;
+}
+.modern-react-captcha__inputField:focus {
+	border-color: #0082e6;
+}
