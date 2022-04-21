@@ -45,8 +45,7 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
 
             {reload && <button className='modern-react-captcha__reloadBtn' onClick={reloadCaptcha}>{reloadText}{reloadIcon && <img src={reloadIcon} alt='Reload' style={{ width: '20px', height: '20px' }} />}</button>}
 
-            <input ref={inputRef} type="text" placeholder="Enter captcha" className='modern-react-captcha__inputField' />
-            <button type="button" onClick={evaluateCaptcha} className='modern-react-captcha__submitBtn'>Submit</button>
+            <input onChange={evaluateCaptcha} ref={inputRef} type="text" placeholder="Enter captcha" className='modern-react-captcha__inputField' />
         </div>
     );
 }
