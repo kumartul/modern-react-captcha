@@ -5,14 +5,14 @@ import ReactCaptcha from 'modern-react-captcha';
 import '../style/Form.css';
 
 const Form = () => {
-	const [captchaMatched, setCaptchaMatched] = useState(false);
+	let captchaMatched = false;
 
 	const handleSuccess = () => {
-		setCaptchaMatched(true);
+		captchaMatched = true;
 	}
 
 	const handleFailure = () => {
-		setCaptchaMatched(false);
+		captchaMatched = false;
 	}
 
 	const handleSubmit = event => {
