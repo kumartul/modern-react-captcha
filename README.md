@@ -74,10 +74,16 @@ You are ready to build! Open [localhost:3000](http://localhost:3000/) to see the
 ```bash
 npm install modern-react-captcha
 ```
+- Using yarn:
+```bash
+yarn add modern-react-captcha
+```
 
 ## Usage Guide 👐
 
 Please refer to the [official documentation](https://modern-react-captcha.netlify.app/)
+
+You can view the [live example](https://github.com/kumartul/modern-react-captcha/tree/master/example)
 
 ## Built With ⚒
 
