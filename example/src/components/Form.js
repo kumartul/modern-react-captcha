@@ -5,8 +5,6 @@ import ReactCaptcha from 'modern-react-captcha';
 import '../style/Form.css';
 
 const Form = () => {
-	const captchaSubmitBtn = document.querySelector('.modern-react-captcha__submitBtn');
-
 	const [captchaMatched, setCaptchaMatched] = useState(false);
 
 	const handleSuccess = () => {
@@ -19,8 +17,6 @@ const Form = () => {
 
 	const handleSubmit = event => {
 		event.preventDefault();
-
-		captchaSubmitBtn.click();
 
 		if(captchaMatched) {
 			alert('Form submitted successfully...');
