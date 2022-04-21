@@ -21,7 +21,6 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
 	}
 
     const [captcha, setCaptcha] = useState(generateRandomCaptcha(charset, length));
-
     const inputRef = useRef(null);
 
     const reloadCaptcha = () => {
@@ -35,8 +34,6 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
         else {
             handleFailure();
         }
-
-        inputRef.current.value = '';
     }
 
     return (
@@ -45,8 +42,7 @@ const ReactCaptcha = ({ charset, length, color, bgColor, reload, reloadText, rel
 
             {reload && <button type="button" className='modern-react-captcha__reloadBtn' onClick={reloadCaptcha}>{reloadText}{reloadIcon && <img src={reloadIcon} alt='Reload' style={{ width: '20px', height: '20px' }} />}</button>}
 
-            <input ref={inputRef} type="text" placeholder="Enter captcha" className='modern-react-captcha__inputField' />
-            <button type="button" onClick={evaluateCaptcha} className='modern-react-captcha__submitBtn'>Submit</button>
+            <input onChange={evaluateCaptcha} ref={inputRef} type="text" placeholder="Enter captcha" className='modern-react-captcha__inputField' />
         </div>
     );
 }
