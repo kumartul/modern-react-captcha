@@ -311,6 +311,7 @@ var ReactCaptcha = function ReactCaptcha(_ref) {
     color: color,
     bgColor: bgColor
   }), reload && /*#__PURE__*/React__default.createElement("button", {
+    type: "button",
     className: "modern-react-captcha__reloadBtn",
     onClick: reloadCaptcha
   }, reloadText, reloadIcon && /*#__PURE__*/React__default.createElement("img", {
@@ -321,12 +322,15 @@ var ReactCaptcha = function ReactCaptcha(_ref) {
       height: '20px'
     }
   })), /*#__PURE__*/React__default.createElement("input", {
-    onChange: evaluateCaptcha,
     ref: inputRef,
     type: "text",
     placeholder: "Enter captcha",
     className: "modern-react-captcha__inputField"
-  }));
+  }), /*#__PURE__*/React__default.createElement("button", {
+    type: "button",
+    onClick: evaluateCaptcha,
+    className: "modern-react-captcha__submitBtn"
+  }, "Submit"));
 };
 
 ReactCaptcha.defaultProps = {
