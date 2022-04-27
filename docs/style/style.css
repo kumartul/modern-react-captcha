@@ -17,6 +17,18 @@ html {
 	--sidebar-header-height: 50px;
 }
 
+/* ----------------------- Generic Classes ------------------ */
+.items-space-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.items-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 /* ----------------------- Light Mode ----------------------- */
 
 body {
@@ -56,10 +68,6 @@ body {
 
 	background-color: white;
 
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
 	user-select: none;
 }
 
@@ -78,36 +86,7 @@ body {
 }
 
 .navbar__right {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
 	padding: 0 10px;
-}
-.navbar__right > #stars-on-github {
-	color: #0082e6;
-	font-size: 15px;
-
-	background-color: white;
-
-	border: 2px solid #0082e6;
-	border-radius: 4px;
-
-	padding: 5px 10px;
-	margin-left: 10px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	cursor: pointer;
-
-	transition: all 0.3s ease;
-}
-.navbar__right > #stars-on-github:hover {
-	color: white;
-
-	background-color: #0082e6;
 }
 .navbar__right > .mode-handler > svg {
 	height: 25px;
@@ -150,12 +129,6 @@ body {
 
 	background: white;
 
-	position: relative;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
 	border-bottom: 1px solid lightgrey;
 }
 .sidebar__header > input {
@@ -191,17 +164,15 @@ body {
 .sidebar > .sidebar__body li.hidden {
 	display: none;
 }
-.sidebar > .sidebar__body ol > li {
-	padding: 7px 0;
-
+.sidebar > .sidebar__body ol > li,
+.sidebar > .sidebar__body ol > li > a,
+.sidebar > .sidebar__body ol  ol > li {
 	color: #4a4a4a;
 	font-size: 17px;
 	font-weight: bold;
 }
-.sidebar > .sidebar__body ol > li > a {
-	color: #4a4a4a;
-	font-size: 17px;
-	font-weight: bold;
+.sidebar > .sidebar__body ol > li {
+	padding: 7px 0;
 }
 .sidebar > .sidebar__body ol > li > a:hover {
 	color: black;
@@ -213,10 +184,6 @@ body {
 }
 .sidebar > .sidebar__body ol  ol > li {
 	padding: 1px 0;
-
-	color: #4a4a4a;
-	font-size: 17px;
-	font-weight: bold;
 }
 
 /* ----- MAIN CONTAINER ----- */
@@ -343,15 +310,6 @@ body {
 	border-top: 1px solid lightgrey;
 
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
-
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.footer__left {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .footer__left > a {
 	color: #323438;
@@ -365,15 +323,10 @@ body {
 .footer__left a:hover {
 	color: black;
 }
-.footer__right {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 .footer__right > a {
 	color: #323438;
 
-	margin-right: 10px;
+	margin-right: 5px;
 
 	cursor: pointer;
 
@@ -399,8 +352,6 @@ body {
 	border-radius: 50%;
 
 	display: none;
-	align-items: center;
-	justify-content: center;
 
 	color: #0082e6;
 	font-size: 20px;
@@ -477,9 +428,7 @@ body.dark section h3 {
 body.dark pre {
 	background: #111;
 }
-body.dark p {
-	color: #f2f2f2;
-}
+body.dark p,
 body.dark ul {
 	color: #f2f2f2;
 }
@@ -520,6 +469,11 @@ body.dark .sidebar__body::-webkit-scrollbar-thumb {
 }
 
 /* ----------------------- Responsiveness ----------------------- */
+@media only screen and (max-width: 400px) {
+	h1 {
+		font-size: 20px;
+	}
+}
 
 @media only screen and (max-width: 540px) {
 	.navbar h2 {
@@ -553,11 +507,5 @@ body.dark .sidebar__body::-webkit-scrollbar-thumb {
 
 	#sidebar-toggler {
 		display: flex;
-	}
-}
-
-@media only screen and (max-width: 400px) {
-	h1 {
-		font-size: 20px;
 	}
 }
