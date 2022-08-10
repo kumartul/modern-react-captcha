@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-    <a href="" target="blank">Docs</a>
+    <a href="https://modern-react-captcha.netlify.app" target="blank">Docs</a>
     ·
     <a href="https://github.com/kumartul/modern-react-captcha/issues/new/choose">Report Bug</a>
     ·
